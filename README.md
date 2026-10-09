@@ -1,10 +1,10 @@
-# BlogNet - Full Stack Blog Application
+# BlogNet - REST API Blog Application
 
-A comprehensive blog platform built with Spring Boot, featuring user authentication, post management, and commenting system.
+A comprehensive REST API for a blog platform built with Spring Boot, featuring user authentication, post management, and commenting system.
 
 ## Overview
 
-BlogNet is a full-stack blogging application designed to showcase modern web development practices. It provides a complete blogging ecosystem where users can create accounts, write posts, and engage with other users through comments.
+BlogNet is a RESTful API application designed to showcase modern backend development practices. It provides a complete blogging ecosystem backend where users can create accounts, write posts, and engage with other users through comments. The API is consumed by client applications (web or mobile) that handle the UI layer.
 
 ## Features
 
@@ -45,14 +45,16 @@ BlogNet is a full-stack blogging application designed to showcase modern web dev
 - **MySQL**: Relational database for persistent storage
 - **JPA/Hibernate**: Object-relational mapping
 
-### Frontend
-- **Thymeleaf**: Server-side template engine
-- **HTML/CSS**: User interface
+### Frontend (Client-side)
+- **HTML5**: Client-side static pages
+- **JavaScript/Axios**: REST API client library
+- **CSS**: Styling
 
 ### Tools & Libraries
 - **Maven**: Build and dependency management
 - **Lombok**: Reduce boilerplate code with annotations
 - **Jakarta Validation**: Input validation framework
+- **Spring Security**: Authentication & authorization for REST endpoints
 
 ## Project Structure
 
@@ -186,6 +188,15 @@ Query Parameters for `/api/posts/paginated`:
    ```
 
    The application will start on `http://localhost:8080`
+
+## Architecture
+
+BlogNet follows a **REST API architecture**:
+- **Backend**: Spring Boot REST API that handles business logic, data persistence, and authentication
+- **Frontend**: Client-side applications (static HTML/JS or separate web/mobile apps) that consume the REST API
+- **Communication**: JSON over HTTP
+
+This separation allows the API to be used by multiple client applications (web browser, mobile app, desktop client, etc.) without backend modifications.
 
 ## Usage Examples
 
